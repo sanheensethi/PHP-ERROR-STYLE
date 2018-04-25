@@ -1,0 +1,27 @@
+{
+  "name": "php-error-style",
+  "version": "0.0.7",
+  "description": "New Style For Errors in PHP",
+  "main": "src/error.php",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanheensethi/PHP-ERROR-STYLE.git"
+  },
+  "keywords": [
+    "PhpErrors",
+    "errors",
+    "errorstyles"
+  ],
+  "author": "Sanheen Sethi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanheensethi/PHP-ERROR-STYLE/issues"
+  },
+  "homepage": "https://github.com/sanheensethi/PHP-ERROR-STYLE#readme"
+}
