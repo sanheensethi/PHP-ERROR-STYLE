@@ -12,8 +12,10 @@ function fatal_handler() {
 }
 
 function show($line,$file,$str){
-	$eline = $line;
 	$efile = $file;
+	$file = explode("/",$file);
+	$file = $file[count($file)-1];
+	$eline = $line;
 	$estr = $str;
 	if($efile != ''){
 		$x = file($efile);
@@ -23,11 +25,12 @@ function show($line,$file,$str){
 		echo "<hr>";
 		echo "<div style='float:left;width:100%;'>";
 		echo "<h2>Error : ".$estr."</h2>";
-		echo "<h2>File : ".$efile."</h2>";
-		echo "<div style='width:100%;font-size:28px;background-color:#2e2a2a;color:#fff;padding:15px;border:1px solid #fff; box-shadow:2px 3px 10px #fff;'>";
+		echo "<h2>File : ".$file."</h2>";
+		echo "<h2 style='border:1px solid #000;overflow:scroll;padding:5px; box-shadow:inset 1px 2px 10px #000;'>File Full Path : ".$efile."</h2>";
+		echo "<div style='width:100%;font-size:28px;background-color:#2e2a2a;color:#fff;padding:15px;border:1px solid #fff; box-shadow:2px 3px 10px #000;'>";
 		
 			for($i = $start; $i<$end ; $i++){
-				if($i==$line-1){
+				if($i===$line-1){
 					echo "<p style='padding:5px;box-shadow:0px 0px 30px #be7b7b;background-color:#c87575;color:#fff; font-weight:bold;'>".($i+1).".".(string)$x[$i]."</p>";
 				}else{
 					echo "<p>".($i+1).".".(string)$x[$i]."</p>";

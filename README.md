@@ -1,4 +1,4 @@
- PHP-ERROR-STYLE
+#Error Handler Style
 
  This content is released under the MIT License (MIT)
 
